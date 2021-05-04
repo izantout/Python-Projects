@@ -5,7 +5,7 @@
 #input 2 is beginning meter reading
 #input 3 is end meter reading
 #if end>beginning:
-  #end-beginning
+#end-beginning
 #if end<beginning
   #do 1 with 9 zeros hadda - beginning... value plus end... display as gallons knowing that its 10th of a gallon awal chi 3al yamin
   #divide number by 10. use '{:.1f}.format(value) to have 1 digit after virgule
