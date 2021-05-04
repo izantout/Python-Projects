@@ -1,3 +1,4 @@
+'''
 $0
 $9,700
 10% of the amount over $0
