@@ -1,0 +1,35 @@
+CODE = input("Enter the customer's code: ")
+BEGINNING = int(input("Enter the customer's beginning meter reading: "))
+END = int(input("The customer's ending meter reading: "))
+if END >= BEGINNING:
+  TOTAL_GALLONS = (END - BEGINNING)/10
+else:
+  TOTAL_GALLONS = ((1_000_000_000 - BEGINNING) + END)/10
+if BEGINNING<=999_999_999 and END<=999_999_999 and BEGINNING >=0 and END >=0:
+  if CODE == 'r' or CODE == 'R':
+    COST = 5 + (0.0005 * TOTAL_GALLONS)
+  elif CODE == 'c' or CODE == 'C':
+    if TOTAL_GALLONS <= 4_000_000:
+      COST = 1_000
+    else:
+      COST = 1_000 + ((TOTAL_GALLONS - 4_000_000) * 0.00025)
+  elif CODE == 'i' or CODE == 'I':
+    if TOTAL_GALLONS < 4_000_000:
+      COST = 1_000
+    elif TOTAL_GALLONS > 4_000_000 and TOTAL_GALLONS < 10_000_000:
+      COST = 2_000
+    else:
+      COST = 2_000+((TOTAL_GALLONS - 10_000_000) * 0.00025)
+  else:
+    print("Invalid Entry")
+    COST = 0
+    TOTAL_GALLONS = 0
+else:
+  print("Invalid Entry")
+  COST = 0
+  TOTAL_GALLONS = 0
+print("Customer code:",CODE)
+print("Beginning meter reading:","{:0>9}".format(BEGINNING))
+print("Ending meter reading:","{:0>9}".format(END))
+print("Gallons of water used:",'{:.1f}'.format(TOTAL_GALLONS))
+print("Amount billed:",'${:.2f}'.format(COST))
