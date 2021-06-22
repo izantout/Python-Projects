@@ -1,3 +1,4 @@
+GlowScript 3.1 VPython
 from vpython import *
 
 scene = canvas(background = color.white) # make a scene with whatever background color
