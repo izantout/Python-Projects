@@ -1,16 +1,14 @@
-print('how many inputs do you want to have?')
-days = float(input())
+days = float(input('How many inputs do you want to have? '))
 total_hours = total_minutes = total_seconds = 0
 while days % 1 != 0:
-    print('Invalid entry. Please try again')
-    days = float(input())
+    days = float(input('Invalid entry. Please try again'))
 else:
     for i in range(int(days)):
-        hours = int(input('How many hours did you want to add for that day'))
+        hours = int(input('How many hours did you want to add for that day '))
         total_hours = hours + total_hours
-        minutes = int(input("Hou many minutes did you want to add for that day"))
+        minutes = int(input("How many minutes did you want to add for that day "))
         total_minutes = minutes + total_minutes
-        seconds = int(input("Hou many seconds did you want to add for that day"))
+        seconds = int(input("How many seconds did you want to add for that day "))
         total_seconds = seconds + total_seconds
 
 
