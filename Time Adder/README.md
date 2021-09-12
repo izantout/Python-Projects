@@ -1,1 +1,1 @@
-
+This code is basically a time adder that adds seconds, minutes, and hours and displays the output in seconds, minutes, and hours. This python code was a result of me wanting to add multiple times in minutes to find out how many hours I spent working, so Idecided instead of using an online calculator, I create my own.
