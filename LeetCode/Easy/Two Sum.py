@@ -11,3 +11,6 @@ class Solution(object):
                     nums2.remove(j)
                 else:
                     continue
+
+                    #Runtime: 3508 ms, faster than 31.71% of Python online submissions for Two Sum.
+                    #Memory Usage: 14.3 MB, less than 73.49% of Python online submissions for Two Sum.
