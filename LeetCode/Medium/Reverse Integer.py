@@ -18,3 +18,7 @@ class Solution(object):
             y = 0
 
         return(y)
+
+        
+        #Runtime: 28 ms, faster than 35.83% of Python online submissions for Reverse Integer.
+        #Memory Usage: 13.3 MB, less than 88.89% of Python online submissions for Reverse Integer.
