@@ -12,3 +12,7 @@ class Solution(object):
             return True
         else:
             return False
+
+        
+            #Runtime: 76 ms, faster than 36.40% of Python online submissions for Palindrome Number.
+            #Memory Usage: 13.6 MB, less than 13.32% of Python online submissions for Palindrome Number.
