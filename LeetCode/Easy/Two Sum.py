@@ -1,7 +1,7 @@
 class Solution(object):
     def twoSum(self, nums, target):
         nums2 = []
-        for i in range(len(nums)):
+        for i in range(len(nums)): # Checks if the sum of the list elements equal the target then outputs the position of the 2 numbers that give the target after being added
             for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
                     nums2.append(i)
