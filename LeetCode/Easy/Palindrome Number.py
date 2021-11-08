@@ -4,11 +4,11 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        list1 = [str(n) for n in str(x)]
-        list2 = [str(n) for n in str(x)]
-        list2.reverse()
+        list1 = [str(n) for n in str(x)] # Converts integer to string then adds each digit to list
+        list2 = [str(n) for n in str(x)] # Creates another list equal to the first
+        list2.reverse() # Reverses created list
 
-        if list1 == list2:
+        if list1 == list2: # Checks if lists are equal
             return True
         else:
             return False
