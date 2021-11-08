@@ -43,3 +43,7 @@ class Solution(object):
                     result+= v1
                     i+= 2
             return result
+        
+        
+            #Runtime: 44 ms, faster than 54.70% of Python online submissions for Roman to Integer.
+            #Memory Usage: 13.5 MB, less than 60.63% of Python online submissions for Roman to Integer.
