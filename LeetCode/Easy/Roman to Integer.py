@@ -4,12 +4,12 @@ class Solution(object):
         :type s: str
         :rtype: int
         """ 
-        for i in range(len(s)):    
-            if s[i].upper()!='I' and s[i].upper()!='V' and s[i].upper()!='X' and s[i].upper()!='L' and                                  s[i].upper()!='C' and s[i].upper()!='D' and s[i].upper()!='M':
+        for i in range(len(s)):    # Checks if inputted Roman number is valid or not
+            if s[i].upper()!='I' and s[i].upper()!='V' and s[i].upper()!='X' and s[i].upper()!='L' and s[i].upper()!='C' and s[i].upper()!='D' and s[i].upper()!='M':
                 run = False   
         run = True
         def value(s):
-            if (s == 'I'):
+            if (s == 'I'): # Checks the value of each letter inputted
                 return 1
             if (s == 'V'):
                 return 5
@@ -26,7 +26,7 @@ class Solution(object):
         
         i=0    
         result=0
-        if run == True:
+        if run == True: # Adds or subtracts the values depending if x>x+1 or x<x+1
             while(i<len(s)):
                 v1 = value(s[i])     
                 if (i+1)<len(s):
