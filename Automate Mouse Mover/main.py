@@ -9,7 +9,7 @@ posMoveTime = input()
 while not posMoveTime.isdigit():
     print("Invalid input. Please try again!", end=" ")
     posMoveTime = input()
-print(pyautogui.position())  # print the position of the current cursor
+# print(pyautogui.position())  # print the position of the current cursor
 
 while True:
     if keyboard.is_pressed("q"):
