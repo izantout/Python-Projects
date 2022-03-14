@@ -4,7 +4,7 @@ import keyboard
 import random
 
 print("Please Hold q if you want to quit")
-print("How long would you like to have between mouse position changes?", end=" ")
+print("How long would you like to have between mouse position changes? The input is in minutes", end=" ")
 posMoveTime = input()
 while not posMoveTime.isdigit():
     print("Invalid input. Please try again!", end=" ")
@@ -18,5 +18,5 @@ while True:
     else:
         # print("I AM HERE")
         pyautogui.moveTo(random.randint(2000, 3000), random.randint(300, 500), 1)  # Moves mouse to a random position
-        time.sleep(int(posMoveTime))
+        time.sleep(int(posMoveTime)*60)
         # print(pyautogui.position())
