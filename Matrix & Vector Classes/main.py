@@ -1,5 +1,6 @@
+# COPY-PASTE YOUR Matrix AND Vec CLASSES TO THIS CELL. 
 import math
-class Vector:
+class Vec:
     def __init__(self, contents = []):
         """
         Constructor defaults to empty vector
@@ -28,7 +29,7 @@ class Vector:
         f = []
         for x,y in zip(self.elements, other.elements):
             f.append(x + y)
-        return Vector(f)
+        return Vec(f)
         
     
     def __sub__(self, other):
@@ -42,7 +43,7 @@ class Vector:
         f = []
         for x,y in zip(self.elements, other.elements):
             f.append(x - y)
-        return Vector(f)
+        return Vec(f)
         
 
     
@@ -72,7 +73,7 @@ class Vector:
             f = []
             for x in self.elements:
                 f.append(x * other)
-            return Vector(f)
+            return Vec(f)
             
     
     def __rmul__(self, other):
@@ -84,7 +85,7 @@ class Vector:
             f = []
             for x in self.elements:
                 f.append(x * other)
-            return Vector(f)
+            return Vec(f)
     
 
     
@@ -153,7 +154,7 @@ class Matrix:
                 for j in range(len(self.rows[0])):
                     sum += self.rows[i][j] * other.elements[j]
                 nMatrix.append(sum)
-            return Vector(nMatrix)
+            return Vec(nMatrix)
         else:
             print("ERROR: Unsupported Type.")
         return
