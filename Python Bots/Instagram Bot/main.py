@@ -99,9 +99,8 @@ def getFollowingAndFollowers(username, password):
 
 
 # Set your Instagram username and password
-username = 'bottester18'
-password = 'bottester123098'
-image_path = os.path.join('C:\\', 'Users', 'issam', 'OneDrive', 'Desktop', 'newSchedule.jpg')
-caption = 'Hello, I just uploaded this image using my bot'
-
-getFollowingAndFollowers(username, password)
+username = 'Your Username'
+password = 'Your password'
+image_path = os.path.join('Your 'Path', 'Here', 'photoName.jpg')
+caption = 'Your caption'
+                          
