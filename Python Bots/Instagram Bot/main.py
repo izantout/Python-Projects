@@ -61,38 +61,26 @@ def check_likes(username, password, media_id):
 
 def getFollowingAndFollowers(username, password):
     api = loginToAccount(username, password)
+    following = []
+    followers = []
+    youFollowThemButTheyDontFollowYouBack = []
+    theyFollowYouButYouDontFollowThemBack = []
     # Get the list of accounts that you follow
     api.getSelfUsersFollowing()
-    following = api.LastJson
-
+    for user in api.LastJson['users']:
+        following.append(user['username'])
     # Get the list of accounts that follow you
     api.getSelfUserFollowers()
-    followers = api.LastJson
-
-    # Create a set of the IDs of the accounts that you follow
-    following_ids = set([following['pk'] for following in following['users']])
-
-    # Create a set of the IDs of the accounts that follow you
-    follower_ids = set([follower['pk'] for follower in followers['users']])
-
-    # Create a list to store the accounts that you follow but do not follow you back
-    youFollowThemButTheyDontFollowYouBack = []
-
-    # Iterate through the list of accounts that you follow
-    for account in following['users']:
-        # Check if the account is not in the list of accounts that follow you
-        if account['pk'] not in follower_ids:
-            youFollowThemButTheyDontFollowYouBack.append(account['username'])
-
-    # Create a list to store the accounts that follow you but you do not follow back
-    theyFollowYouButYouDontFollowThemBack = []
-
-    # Iterate through the list of accounts that follow you
-    for follower in followers['users']:
-        # Check if the account is not in the list of accounts that you follow
-        if follower['pk'] not in following_ids:
-            theyFollowYouButYouDontFollowThemBack.append(follower['username'])
-
+    for user in api.LastJson['users']:
+        followers.append(user['username'])
+    
+    for username in following:
+        if username not in followers:
+            youFollowThemButTheyDontFollowYouBack.append(username)
+    for username in followers:
+        if username not in following:
+            theyFollowYouButYouDontFollowThemBack.append(username)
+            
     # Print the list of unfollowers and non-followers
     print("The people you follow but they dont follow you back are:", youFollowThemButTheyDontFollowYouBack)
     print("The people that follow you but you dont follow them back are:", theyFollowYouButYouDontFollowThemBack)
